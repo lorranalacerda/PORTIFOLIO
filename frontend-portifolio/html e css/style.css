@@ -1,0 +1,70 @@
+html{
+    background-color: #ffe4c4;
+}
+
+h2{
+    text-align: center;
+    color: rgb(129, 38, 38);
+}
+
+h3{
+    color: rgb(140, 38, 38);
+}
+
+.inicio{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    width: 40%;
+    border-radius: 32px 64px;
+}
+
+.text{
+    background-color: rgb(250, 206, 153);
+    width: 90%;
+    text-align: justify;
+    position: relative;
+    border-radius: 32px 64px;
+}
+
+.sobremim{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    position: relative;
+    width: 40%;
+    border-radius: 32px 64px;
+}
+
+.Skils{
+        background-color: rgb(250, 206, 153);
+        text-align: justify;
+        width: 40%;
+        border-radius: 32px 64px;
+}
+.hards{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    position: relative;
+    width: 100%;
+    border-radius: 32px 64px;
+}
+.softs{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    position: relative;
+    width: 100%;
+    border-radius: 32px 64px;
+}
+
+.projetos{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    width: 40%;
+    border-radius: 32px 64px;
+}
+
+.contato{
+    background-color: rgb(250, 206, 153);
+    text-align: justify;
+    width: 40%;
+    border-radius: 32px 64px;
+}

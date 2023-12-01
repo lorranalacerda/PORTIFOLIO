@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    background-color: #040420;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    background-position:unset ;
+    align-items: center;
+}
+
+.body{
+    background-color: #040425;
+    
+}
+
+.max-width{
+    max-width: 1400px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*  MENU INICIAL*/
+
+.navbar{
+    position: absolute;
+    width: 100%;
+    padding: 30px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 999;
+    transition: all 0.5s ease;
+    align-items: center;
+    display: table;
+
+    text-align: center;
+    padding: 20px;
+    /*PARA GERAR GRADIENTES, UTILIZAO O https://cssgradient.io/*/
+    background: rgb(4, 4, 25);
+    background: linear-gradient(180deg,rgb(5, 5, 51) 0%, rgba(4,4,50,1) 15%, rgba(4,4,50,0.7987570028011204) 50%, rgba(4, 4, 50, 0.603) 60%, rgba(4,4,50,0.2049194677871149) 80%, rgba(4,4,40,0) 90%);
+}
+
+.navbar.sticky{
+     padding: 0px 0;
+}
+
+
+.navbar .max-width{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+/*  TELA HOME INICIO  /  TELA INICIAL BEHIVE*/
+.home{
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    min-height: 100%;
+    max-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*background-image: url(image/background-inicio.jpg);*/
+    /*PARA GERAR GRADIENTES, UTILIZAO O https://cssgradient.io/*/
+    background: rgb(4,4,50);
+    background: linear-gradient(to top,rgba(4,4,50,1) 0%, rgba(4,4,50,1) 2%, rgba(4,4,50,0.7987570028011204) 5%, rgba(4, 5, 50, 0.527) 10%, rgba(4, 4, 50, 0.178) 20%, rgba(4, 4, 50, 0.192) 90%);
+}
+
+.backGroundInicio{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    min-height: 100%;
+    max-height: 100%;
+    align-items: center;
+    justify-items: center;
+    z-index: -100;
+    background: url(image/background-inicio.jpg) repeat center;
+    background-size: cover;
+}
+
+.home .max-width{
+    margin: auto 0 auto center;
+}
+.home .home-content .text-1{
+    font-size: 30px;
+}
+
+.home .home-content .text-1-subtitulo{
+    font-size: 18px;
+    text-align: center;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color:#ffbd21 ;
+    font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: #040440;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #040425;
+}
+.home .home-content a:hover{
+    color: #06cc48;
+    background: none;
+}
+
+.home .home-content .logoCentral{
+    width: 29%;
+}
+
+
+/*  Menu  Mobile  */
+.menu-btn{
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Botão para subir até o topo da tela*/
+.scroll-up-btn{
+    position: fixed;
+    width: 41px;
+    height: 45px;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background: #040440;
+    border-radius: 6px;
+    font-size: 30px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*  todos os codigos similares  */
+section{
+    padding: 100px 0;
+}
+section .title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #fff;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #1C1C1C;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom:-12px;
+    left: 50%;
+    font-size: 20px;
+    background: #fff;
+    color: #ffbd21;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  SESSÃO PROJETOS */
+
+.services{
+    /*PARA GERAR GRADIENTES, UTILIZAO O https://cssgradient.io/*/
+    background: rgb(2,2,50, 1);
+    background: linear-gradient(to bottom,rgb(2, 2, 50) 0%, rgba(2, 2,50) 2%, rgba(2,2,50, 0.7987570028011204) 5%, rgba(2,2,50,0.6026785714285714) 10%, rgba(2,2,50,0.2049194677871149) 20%, rgba(0,0,0,0) 90%);
+   
+}
+.services, .teams{
+    /*background: #1C1C1C;*/
+    color: #fff;
+}
+.services .title::before,
+.teams .title::before{
+    background: #1C1C1C;
+}
+.services .title::after,
+.teams .title::after{
+    /*background-color: #1C1C1C;*/
+    content: "Um pouco do meu trabalho...";
+    background: none;
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+a{
+    font-weight: bold;
+    color: #ffbd21;
+}
+.services .serv-content .card:hover{
+    background: rgb(75, 47, 233);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card ion-icon{
+    font-size: 70px;
+    color: #fff;
+}
+.services .serv-content .card:hover ion-icon{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/*  SESSÃO EQUIPE  */
+.teams .title::after{
+    content: "Quem é Lorrana Lacerda?";
+    background: none;
+}
+.teams .carousel .card{
+    background: none;
+    border-radius: 10px;
+    padding: 40px 55px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    background: rgb(4,4,25)
+}
+.teams .carousel .card img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(17, 7, 73);
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: #1C1C1C;
+}
+.teams .carousel .card .box{
+    display: flex;
+    font-weight: bolder;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: rgb(195, 207, 89)6a6;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    width: 14px;
+    height: 14px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid rgb(75, 47, 233)!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(75, 47, 233)!important;
+}
+
+
+/*  FALE CONOSCO  */
+
+.contact .title::after{
+    content: "Trabalhe comigo / me contrate ... vai da sua necessidade";
+    background: none;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content{
+    align-items: flex-start;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.text-textoFaleConosco{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500;
+    color: #fff;
+}
+.contact .contact-content .row .info .sub-title{
+    color: #fff;
+}
+.contact .contact-content .row ion-icon{
+    font-size: 25px;
+    color: #fff;
+}
+.contact .rigth form .fields{
+    display: flex;
+}
+.contact .rigth form .field,
+.contact .rigth form .fields .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.contact .rigth form .field input,
+.contact .rigth form .textarea textarea{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.contact .rigth form .name{
+    margin-right: 10px;
+}
+.contact .rigth form .email{
+    margin-left: 10px;
+}
+.contact .rigth form .textarea{
+    width: 100%;
+    height: 80px;
+}
+.contact .rigth form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .rigth form .button{
+    width: 170px;
+    height: 47px;
+}
+.contact .rigth form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #040425;
+    background: #040440;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .rigth form .button button:hover{
+    color: #ffbd21;
+    background: none;
+}
+
+/*  sessão footer  */
+footer{
+    background: none;
+    padding: 2% 5%;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: #ffbd21;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/*  RESPONSIVIDADE  */
+@media (max-width: 1300px){
+    .navbar .max-width{
+        margin-left: 0;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
+    }
+}
+@media (max-width: 991px){
+    .navbar .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .max-width{
+        max-width: 800px;
+        padding: 0 50px;
+    }
+
+    .backGroundVideo{
+        left: -200%;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        background: #1C1C1C;
+        padding-top: 80px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    footer{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 690px){
+    .backGroundVideo{
+        left: -200%;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card {
+        width:100%;
+    }
+    .navbar{
+        text-align: left;
+        align-items: left;
+    }
+}
+@media (max-width: 500px){
+    .backGroundVideo{
+        left: -155%;
+    }
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
